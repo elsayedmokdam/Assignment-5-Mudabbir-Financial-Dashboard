@@ -1,0 +1,686 @@
+/* Small (0 --> 576px) (Mobile) */
+@media screen and (max-width: 576px) {
+  /* General */
+  .sm-100 {
+    width: 100%;
+  }
+  .sm-d-none {
+    display: none;
+  }
+  .sm-d-block {
+    display: block;
+  }
+  .sm-d .sm-d-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .sm-d-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .sm-justify-center {
+    justify-content: center;
+  }
+  .sm-align-center {
+    align-items: center;
+  }
+  .sm-text-center {
+    text-align: center;
+  }
+  .sm-gap-10 {
+    gap: 10px;
+  }
+
+  :root {
+    --bg-black: #080c14;
+    --color-black: #000;
+    --color-gray: #535d6c;
+    --color-white: #fff;
+    --color-blue: #3b40e4;
+    --color-green: #40c79a;
+    --color-red: #c70036;
+    --bg-white: #fff;
+    /* background-color: #080C14; */
+  }
+
+  /******************* Navbar *******************/
+
+  .navbar {
+    display: none;
+  }
+
+  /******************************** Left Section  **************************************/
+
+  .container-left {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.9375rem 0.625rem;
+    grid-template-areas:
+      "heading heading heading"
+      "balance-income-expenses balance-income-expenses balance-income-expenses"
+      "balance-income-expenses balance-income-expenses balance-income-expenses"
+      "table table table"
+      "table table table"
+      "table table table"
+      "recent-activities recent-activities recent-activities"
+      "recent-activities recent-activities recent-activities"
+      "recent-activities recent-activities recent-activities"
+      "monthly-billing monthly-billing monthly-billing"
+      "monthly-billing monthly-billing monthly-billing"
+      "monthly-billing monthly-billing monthly-billing"
+      "payment-methods payment-methods payment-methods"
+      "income-versus-expenses income-versus-expenses income-versus-expenses"
+      "budget-overview budget-overview budget-overview"
+      "account-summary account-summary account-summary"
+      "account-summary account-summary account-summary"
+      "account-summary account-summary account-summary";
+  }
+
+  /********************* Heading ********************/
+
+  .Modabber-mottasel {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .mottasel-dot {
+    width: 100%;
+    background-color: #f0fdf4;
+    padding: 0.3125rem;
+    border-radius: 10px;
+    justify-content: center;
+  }
+
+  .account-search-notify {
+    width: 100%;
+    padding: 1.25rem;
+    color: #364153;
+    background-color: #fbfdfe;
+    justify-content: space-around;
+  }
+
+  .account-search-notify .account {
+    width: 40%;
+    justify-content: center;
+  }
+
+  /****************** Balance - income - expense ***********************/
+
+  .balance-income-expenses {
+    grid-area: balance-income-expenses;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .current-balance,
+  .income,
+  .expenses {
+    align-items: flex-end;
+    padding: 1.875rem;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .current-balance {
+    grid-area: current-balance;
+  }
+
+  .current-balance p,
+  .income p,
+  .expenses p {
+    font-size: 1.125rem;
+  }
+
+  .current-balance h2,
+  .income h2,
+  .expenses h2 {
+    font-size: 1.5rem;
+  }
+
+  .income {
+    grid-area: income;
+  }
+
+  .expenses {
+    grid-area: expenses;
+  }
+
+  /******************* Recent activities ***********************/
+
+  .recent-activities .create-new-account .text h4 {
+    font-size: 0.875rem;
+  }
+
+  .recent-activities .create-new-account .text p,
+  .recent-activities .create-new-account .text h5 {
+    font-size: 0.75rem;
+    color: #4a5565;
+    font-weight: 700;
+  }
+
+  .recent-activities .add-new-card .text h4 {
+    font-size: 0.875rem;
+  }
+
+  .recent-activities .add-new-card .text p,
+  .recent-activities .add-new-card .text h5 {
+    font-size: 0.75rem;
+    color: #4a5565;
+    font-weight: 700;
+  }
+
+  /*************** Monthly billing ******************/
+
+  .monthly-billing .body .cards .card {
+    width: 40%;
+    background-color: #f9fafb;
+    padding: 0.625rem;
+    border: 1px solid rgba(240, 235, 235, 0.419);
+    border-radius: 20px;
+  }
+
+  .monthly-billing .body .cards .card h5 {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  /*****************  table ****************************/
+
+  .table {
+    grid-area: table;
+    direction: rtl;
+    padding-right: 2.5rem;
+  }
+
+  .table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
+
+  table td {
+    padding-left: 4.375rem;
+  }
+
+  .table table thead {
+    border-bottom: 1px solid lightgray;
+  }
+
+  .table table tbody tr .one {
+    padding-block: 1.25rem;
+  }
+
+  .table table tbody tr .one .image-name-disc .image img {
+    width: 70%;
+    border-radius: 50%;
+  }
+
+  .table table tbody tr .one .image-name-disc .image {
+    width: 50%;
+  }
+
+  .table table tbody tr .one .image-name-disc .name-disc {
+    width: 50%;
+    font-size: 0.875rem;
+  }
+
+  .table table tbody tr .one .image-name-disc .disc p {
+    font-size: 0.575rem;
+    font-weight: 500;
+  }
+
+  .table table tbody tr .two span,
+  .table table tbody tr .three span,
+  .table table tbody tr .four span,
+  .table table tbody tr .five span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0 0.625rem;
+    border-radius: 20px;
+  }
+
+  .table table tbody tr .one .image-name-disc .icon span i {
+    padding: 0.75rem;
+    font-size: 0.625rem;
+    background-color: #ffedd4;
+    color: #f54a00;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .table table tbody tr .one .image-name-disc .icon .film,
+  .table table tbody tr .one .image-name-disc .icon .club {
+    background-color: #dbeafe;
+    color: #155dfc;
+  }
+
+  .chart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  .account-summary .current-account .icon-text .text p,
+  .account-summary .saving-account .icon-text .text p,
+  .account-summary .credit-card .icon-text .text p {
+    font-size: 0.625rem;
+    font-weight: 500;
+  }
+}
+
+/* Medium (768px --> 992px) (Tablet) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* General */
+  .md-100 {
+    width: 100%;
+  }
+  .md-d-none {
+    display: none;
+  }
+  .md-d-block {
+    display: block;
+  }
+  .md-d-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .md-d-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .md-justify-center {
+    justify-content: center;
+  }
+  .md-align-center {
+    align-items: center;
+  }
+  .md-text-center {
+    text-align: center;
+  }
+  .md-gap-10 {
+    gap: 10px;
+  }
+  .navbar {
+    width: 12%;
+    height: 60vh;
+    padding: 1.25rem;
+    background-color: var(--bg-white);
+    border-left: 1px solid #e5e7eb;
+    gap: 30px;
+    overflow-y: auto;
+    scrollbar-color: #f2f3f5;
+    scrollbar-width: thin;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .navbar .body .first {
+    width: fit-content;
+  }
+
+  .right .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-left {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px 10px;
+    grid-template-areas:
+      "heading heading heading"
+      "balance-income-expenses balance-income-expenses balance-income-expenses"
+      "balance-income-expenses balance-income-expenses balance-income-expenses"
+      "table table table"
+      "table table table"
+      "table table table"
+      "recent-activities recent-activities recent-activities"
+      "recent-activities recent-activities recent-activities"
+      "recent-activities recent-activities recent-activities"
+      "monthly-billing monthly-billing monthly-billing"
+      "monthly-billing monthly-billing monthly-billing"
+      "monthly-billing monthly-billing monthly-billing"
+      "payment-methods payment-methods payment-methods"
+      "income-versus-expenses income-versus-expenses income-versus-expenses"
+      "budget-overview budget-overview budget-overview"
+      "account-summary account-summary account-summary"
+      "account-summary account-summary account-summary"
+      "account-summary account-summary account-summary";
+  }
+
+  /********************* Heading ********************/
+
+  .account-search-notify {
+    width: 50%;
+    padding: 1.25rem;
+    color: #364153;
+    background-color: #fbfdfe;
+    justify-content: space-around;
+  }
+
+  .account-search-notify .account {
+    width: 60%;
+    justify-content: center;
+  }
+
+  /****************** Balance - income - expense ***********************/
+
+  .balance-income-expenses {
+    grid-area: balance-income-expenses;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .current-balance,
+  .income,
+  .expenses {
+    align-items: flex-end;
+    padding: 1.875rem;
+    justify-content: center;
+    gap: 20px;
+    width: 31%;
+  }
+
+  .current-balance h2,
+  .income h2,
+  .expenses h2 {
+    font-size: 1.5rem;
+  }
+
+  /********************* table ********************/
+
+  .table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
+
+  table td {
+    padding-left: 4.375rem;
+  }
+
+  .table table thead {
+    border-bottom: 1px solid lightgray;
+  }
+
+  .table table tbody tr .one {
+    padding-block: 1.25rem;
+  }
+
+  .table table tbody tr .one .image-name-disc .image img {
+    width: 70%;
+    border-radius: 50%;
+  }
+
+  .table table tbody tr .one .image-name-disc .image {
+    width: 50%;
+  }
+
+  .table table tbody tr .one .image-name-disc .name-disc {
+    width: 50%;
+    font-size: 0.875rem;
+  }
+
+  .table table tbody tr .one .image-name-disc .disc p {
+    font-size: 0.575rem;
+    font-weight: 500;
+  }
+
+  .table table tbody tr .two span,
+  .table table tbody tr .three span,
+  .table table tbody tr .four span,
+  .table table tbody tr .five span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0 0.625rem;
+    border-radius: 20px;
+  }
+
+  .table table tbody tr .one .image-name-disc .icon span i {
+    padding: 0.75rem;
+    font-size: 0.625rem;
+    background-color: #ffedd4;
+    color: #f54a00;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  /****************** Recent activities *******************/
+
+  .recent-activities {
+    grid-area: recent-activities;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
+  .recent-activities .create-new-account .text {
+    align-items: flex-end;
+  }
+
+  .recent-activities .create-new-account .text h4 {
+    font-size: 1.345rem;
+  }
+
+  .recent-activities .create-new-account .text p,
+  .recent-activities .create-new-account .text h5 {
+    font-size: 1rem;
+  }
+
+  .recent-activities .add-new-card .text h4 {
+    font-size: 1.345rem;
+  }
+
+  .recent-activities .add-new-card .text p {
+    font-size: 1rem;
+  }
+
+  .recent-activities .add-new-card .text h5 {
+    font-size: 0.875rem;
+  }
+
+  /****************** monthly billing *******************/
+
+  .monthly-billing .body .cards .card {
+    width: 40%;
+    background-color: #f9fafb;
+    padding: 0.625rem;
+    border: 1px solid rgba(240, 235, 235, 0.419);
+    border-radius: 20px;
+  }
+
+  .monthly-billing .body .cards .card h5 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Large (992px --> next override) (Desktop) */
+@media screen and (min-width: 992px) {
+  .lg-25 {
+    width: 25%;
+  }
+  .lg-33 {
+    width: 33.3333%;
+  }
+  .lg-50 {
+    width: 50%;
+  }
+  .lg-100 {
+    width: 100%;
+  }
+  .lg-d-none {
+    display: none;
+  }
+  .lg-d-block {
+    display: block;
+  }
+  .lg-d-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .lg-d-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /******************* Navbar *******************/
+
+  .navbar {
+    width: 18%;
+  }
+
+  .container-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px 10px;
+    grid-auto-flow: row;
+    width: 80%;
+    direction: ltr;
+    margin-block: 20px;
+    grid-template-areas:
+      "heading heading heading heading heading heading heading heading heading"
+      "balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses"
+      "balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses"
+      "table table table table table table recent-activities recent-activities recent-activities"
+      "table table table table table table recent-activities recent-activities recent-activities"
+      "table table table table table table recent-activities recent-activities recent-activities"
+      "table table table table table table monthly-billing monthly-billing monthly-billing"
+      "table table table table table table monthly-billing monthly-billing monthly-billing"
+      "table table table table table table monthly-billing monthly-billing monthly-billing"
+      "payment-methods payment-methods payment-methods income-versus-expenses income-versus-expenses income-versus-expenses budget-overview budget-overview budget-overview"
+      "payment-methods payment-methods payment-methods income-versus-expenses income-versus-expenses income-versus-expenses budget-overview budget-overview budget-overview"
+      "payment-methods payment-methods payment-methods income-versus-expenses income-versus-expenses income-versus-expenses budget-overview budget-overview budget-overview"
+      "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview"
+      "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview"
+      "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview";
+  }
+
+  .account-search-notify {
+    width: 40%;
+    padding: 1.25rem;
+    color: #364153;
+    background-color: #fbfdfe;
+  }
+
+  .account {
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid #e2e2e3;
+    border-radius: 20px;
+    padding: 0.3125rem;
+    box-shadow: 2px 2px 2px gray;
+    transition: transform 0.3s;
+  }
+
+  /********************* table ********************/
+
+  .table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .table table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
+
+  /******************* Recent activities ***********************/
+
+  .recent-activities .create-new-account .text h4 {
+    font-size: 0.875rem;
+  }
+
+  .recent-activities .create-new-account .text p,
+  .recent-activities .create-new-account .text h5 {
+    font-size: 0.75rem;
+    color: #4a5565;
+    font-weight: 700;
+  }
+
+  .recent-activities {
+    grid-area: recent-activities;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
+  .recent-activities .add-new-card {
+    gap: 5px;
+  }
+
+  /*************** Monthly billing ******************/
+
+  .monthly-billing .body .cards .card {
+    width: 40%;
+    background-color: #f9fafb;
+    padding: 0.625rem;
+    border: 1px solid rgba(240, 235, 235, 0.419);
+    border-radius: 20px;
+  }
+
+  .chart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+}
+
+/* Extra Large (1200px --> next override) (Desktop) */
+@media screen and (min-width: 1200px) {
+  .xl-25 {
+    width: 25%;
+  }
+  .xl-33 {
+    width: 33.3333%;
+  }
+  .xl-50 {
+    width: 50%;
+  }
+  .xl-100 {
+    width: 100%;
+  }
+  .xl-d-none {
+    display: none;
+  }
+  .xl-d-block {
+    display: block;
+  }
+  .xl-d-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .xl-d-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar {
+    width: 17%;
+  }
+}

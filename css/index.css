@@ -1,0 +1,1050 @@
+/***************************** General Styles  **********************************/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: "Exo", sans-serif; */
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.d-column {
+  flex-direction: column;
+}
+
+.d-row {
+  flex-direction: row;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+div img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.color-gray {
+  color: #6a7282;
+}
+
+.bg-green {
+  background-color: #dbfce7;
+}
+
+.color-green {
+  color: #00a63e;
+}
+
+:root {
+  --bg-black: #080c14;
+  --color-black: #000;
+  --color-gray: #535d6c;
+  --color-white: #fff;
+  --color-blue: #3b40e4;
+  --color-green: #40c79a;
+  --color-red: #c70036;
+  --bg-white: #fff;
+}
+
+/******************* Navbar *******************/
+
+.navbar {
+  width: 17%;
+  height: 100vh;
+  padding: 1.25rem;
+  background-color: var(--bg-white);
+  border-left: 1px solid #e5e7eb;
+  gap: 30px;
+  overflow-y: auto;
+  scrollbar-color: #f2f3f5;
+  scrollbar-width: thin;
+  position: fixed;
+}
+
+.Modabber p {
+  color: oklch(0.45 0.03 257.71);
+  font-size: 1rem;
+  font-weight: 530;
+  line-height: 1.25rem;
+}
+
+.Modabber h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 3rem;
+}
+
+.Modabber span i {
+  font-size: 1.25rem;
+  background-color: var(--color-blue);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 3px var(--color-blue);
+}
+
+.navbar .body .first {
+  color: var(--color-blue);
+  background-color: #eff6ff;
+  border-radius: 10px;
+  border: 1px solid #dbeafe;
+}
+
+.navbar .body h4 {
+  padding: 0.625rem;
+  font: 0.9375rem;
+  transition: transform 0.3s;
+}
+
+.navbar .body h4 span i {
+  margin-left: 0.9375rem;
+}
+
+.navbar .body h4:hover {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navbar .body h4:not(.first) {
+  color: var(--color-gray);
+}
+
+.navbar .body .fast-action {
+  font-size: 1.25rem;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+}
+
+.navbar .body .fast-action:hover {
+  cursor: no-drop;
+  background-color: transparent;
+}
+
+.fast-actions-list h4:hover {
+  transform: translate(3px, -3px);
+}
+
+.fast-actions-list h4 span .one {
+  background-color: #dbe8fc;
+  color: #155dfc;
+  padding: 0.9375rem 1.25rem;
+  border-radius: 10px;
+}
+.fast-actions-list h4 span .two {
+  background-color: #d4f3e1;
+  color: #00a63e;
+  padding: 0.9375rem 1.25rem;
+  border-radius: 10px;
+}
+.fast-actions-list h4 span .three {
+  background-color: #efe0fc;
+  color: #9810fa;
+  padding: 0.9375rem 1.25rem;
+  border-radius: 10px;
+}
+.fast-actions-list h4 span .four {
+  background-color: #fbe4d4;
+  color: #f54a00;
+  padding: 0.9375rem 1.25rem;
+  border-radius: 10px;
+}
+
+/******************************** Left Section  **************************************/
+
+.common-styles {
+  background-color: #fbfdfe;
+  padding: 1.25rem;
+  border: 1px solid #e2e2e3;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.show-all {
+  cursor: pointer;
+  transition: color 0.3;
+}
+
+.show-all:hover {
+  color: #000;
+}
+
+.container-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 15px 10px;
+  grid-auto-flow: row;
+  width: 80%;
+  direction: ltr;
+  margin-block: 20px;
+  position: absolute;
+  left: 20px;
+  grid-template-areas:
+    "heading heading heading heading heading heading heading heading heading"
+    "balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses"
+    "balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses"
+    "table table table table table table recent-activities recent-activities recent-activities"
+    "table table table table table table recent-activities recent-activities recent-activities"
+    "table table table table table table recent-activities recent-activities recent-activities"
+    "table table table table table table monthly-billing monthly-billing monthly-billing"
+    "table table table table table table monthly-billing monthly-billing monthly-billing"
+    "table table table table table table monthly-billing monthly-billing monthly-billing"
+    "payment-methods payment-methods payment-methods income-versus-expenses income-versus-expenses income-versus-expenses budget-overview budget-overview budget-overview"
+    "payment-methods payment-methods payment-methods income-versus-expenses income-versus-expenses income-versus-expenses budget-overview budget-overview budget-overview"
+    "payment-methods payment-methods payment-methods income-versus-expenses income-versus-expenses income-versus-expenses budget-overview budget-overview budget-overview"
+    "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview"
+    "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview"
+    "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview";
+}
+
+/* Heading */
+
+.heading {
+  grid-area: heading;
+  direction: rtl;
+  padding: 0.625rem;
+}
+
+.mottasel-dot {
+  background-color: #f0fdf4;
+  padding: 0.3125rem;
+  border-radius: 10px;
+}
+
+.mottasel {
+  color: #008236;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #6de19b;
+  border-radius: 50%;
+}
+
+.account-search-notify {
+  width: 25%;
+  padding: 1.25rem;
+  color: #364153;
+  background-color: #fbfdfe;
+}
+
+.search {
+  background-color: #fbfdfe;
+  border: 1px solid #e2e2e3;
+  border-radius: 10px;
+  padding: 0.625rem;
+}
+
+.notify {
+  background-color: #fbfdfe;
+  border: 1px solid #e2e2e3;
+  border-radius: 10px;
+  padding: 0.625rem;
+  position: relative;
+}
+
+.notify .num {
+  width: 17px;
+  height: 17px;
+  font-size: 0.8125rem;
+  position: absolute;
+  top: -5;
+  right: -5;
+  background-color: #fb2c36;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account {
+  width: 60%;
+  background-color: #fff;
+  border: 1px solid #e2e2e3;
+  border-radius: 20px;
+  padding: 0.3125rem;
+  box-shadow: 2px 2px 2px gray;
+  transition: transform 0.3s;
+}
+
+.account:hover {
+  transform: scale(1.009);
+}
+
+.account .text h4 {
+  font-size: 0.9375rem;
+  color: #000;
+}
+
+.account .text p {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.account-search-notify .account .image img {
+  border-radius: 20px;
+}
+
+.account-search-notify .account .image {
+  width: 40%;
+}
+
+/***************** balance- income-expence ************************/
+
+.balance-income-expenses {
+  grid-area: balance-income-expenses;
+}
+
+.current-balance,
+.income,
+.expenses {
+  align-items: flex-end;
+  padding: 1.875rem;
+  justify-content: center;
+  gap: 20px;
+  width: 32%;
+}
+
+.current-balance p,
+.income p,
+.expenses p {
+  font-size: 1.25rem;
+}
+
+.current-balance h2,
+.income h2,
+.expenses h2 {
+  font-size: 2.875rem;
+}
+
+.current-balance h5,
+.income h5 {
+  color: #00a63e;
+  font-size: 1rem;
+}
+
+.expenses h5 {
+  color: red;
+}
+
+/****************** Recent activities *******************/
+
+.recent-activities {
+  grid-area: recent-activities;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.recent-activities .create-new-account {
+  width: 100%;
+  background-color: #eff6ff;
+  padding: 1.25rem;
+  border-radius: 20px;
+  border-left: 5px solid #2b7fff;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.recent-activities .create-new-account .text {
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.recent-activities .create-new-account .text h4 {
+  font-size: 1rem;
+}
+
+.recent-activities .create-new-account .text p,
+.recent-activities .create-new-account .text h5 {
+  font-size: 0.875rem;
+  color: #4a5565;
+  font-weight: 700;
+}
+
+.recent-activities .create-new-account .icon {
+  background-color: #dbeafe;
+  color: #155dfc;
+  padding: 0.625rem;
+  border-radius: 50%;
+}
+
+.recent-activities .add-new-card {
+  background-color: #f0fdf4;
+  padding: 1.25rem;
+  border-radius: 20px;
+  border-left: 5px solid #00c951;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.recent-activities .add-new-card .text {
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.recent-activities .add-new-card .text h4 {
+  font-size: 1rem;
+}
+
+.recent-activities .add-new-card .text p {
+  font-size: 0.75rem;
+  color: #4a5565;
+  font-weight: 700;
+}
+
+.recent-activities .add-new-card .text h5 {
+  font-size: 0.875rem;
+  color: #4a5565;
+  font-weight: 700;
+}
+
+.recent-activities .add-new-card .icon {
+  background-color: #dbfce7;
+  color: #00a63e;
+  padding: 0.625rem;
+  border-radius: 50%;
+}
+
+.line {
+  width: 90%;
+  margin: auto;
+  border: 1px solid rgb(238, 235, 235);
+  border-radius: 50%;
+}
+
+.recent-activities button {
+  color: #1447e6;
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  background-color: transparent;
+  margin: auto;
+}
+
+/****************** monthly billing *******************/
+
+.monthly-billing {
+  grid-area: monthly-billing;
+}
+
+.monthly-billing .body .title {
+  text-align: center;
+}
+
+.monthly-billing .body .cards .card {
+  width: 40%;
+  background-color: #f9fafb;
+  padding: 20px;
+  border: 1px solid rgba(240, 235, 235, 0.419);
+  border-radius: 20px;
+}
+
+.monthly-billing .body .cards .card span i {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.monthly-billing .body .cards .card-1 h5 {
+  color: #fb2c36;
+}
+
+.monthly-billing .body .cards .card-1 span i {
+  color: #155dfc;
+  background-color: #dbeafe;
+}
+.monthly-billing .body .cards .card-2 h5 {
+  color: #fd7d00;
+}
+
+.monthly-billing .body .cards .card-2 span i {
+  color: #d08700;
+  background-color: #fef9c2;
+}
+.monthly-billing .body .cards .card-3 h5 {
+  color: #00c951;
+}
+
+.monthly-billing .body .cards .card-3 span i {
+  color: #00a63e;
+  background-color: #dbfce7;
+}
+
+.monthly-billing .body .cards .card-4 span i {
+  color: #e7000b;
+  background-color: #ffe2e2;
+}
+
+/*********************************************/
+
+.caption {
+  padding-bottom: 30px;
+}
+
+.table {
+  grid-area: table;
+  direction: rtl;
+  padding-right: 2.5rem;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td:not(.first-column) {
+  width: 15%;
+  text-align: start;
+}
+
+.first-column {
+  width: 25%;
+}
+
+.table table thead {
+  border-bottom: 1px solid lightgray;
+}
+
+.table table tbody tr .one {
+  padding-block: 1.25rem;
+}
+
+.table table tbody tr .one .image-name-disc .image img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.table table tbody tr .one .image-name-disc .image {
+  width: 30%;
+}
+
+.table table tbody tr .one .image-name-disc .name-disc {
+  width: 50%;
+  font-size: 0.875rem;
+}
+
+.table table tbody tr .one .image-name-disc .disc p {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.table table tbody tr .two span,
+.table table tbody tr .three span,
+.table table tbody tr .four span,
+.table table tbody tr .five span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0 0.625rem;
+  border-radius: 20px;
+}
+
+.table table tbody tr .one .image-name-disc .icon span i {
+  padding: 0.875rem;
+  background-color: #ffedd4;
+  color: #f54a00;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.bg-red {
+  background-color: #ffedd4;
+}
+
+.color-red {
+  color: #9f2d00;
+}
+
+.bg-blue {
+  background-color: #dbeafe;
+}
+
+.color-blue {
+  color: #155dfc;
+}
+
+.bg-purple {
+  background-color: #f3e8ff;
+}
+
+.color-purple {
+  color: #6e25b3;
+}
+
+.bg-yellow {
+  background-color: #fef9c2;
+}
+
+.color-yellow {
+  color: #894b00;
+}
+
+.table table tbody tr .one .image-name-disc .icon .film,
+.table table tbody tr .one .image-name-disc .icon .club {
+  background-color: #dbeafe;
+  color: #155dfc;
+}
+
+/************ budget overvirw **************/
+
+.budget-overview {
+  grid-area: budget-overview;
+  direction: rtl;
+}
+
+.budget-overview .all-cards .card {
+  width: 100%;
+  height: 280px;
+  padding: 20px;
+  background-color: #eff5ff;
+  border-radius: 10px;
+  border: 1px solid rgb(202, 201, 201);
+}
+
+.budget-overview .all-cards .card .middle {
+  text-align: end;
+}
+
+.budget-overview .all-cards .card .buttom {
+  width: 100%;
+  height: 10px;
+  border-radius: 40px;
+  background-color: #e5e7eb;
+}
+
+.budget-overview .all-cards .card .buttom .inner-buttom {
+  width: 82.5%;
+  height: 10px;
+  background-color: #3c79ff;
+  border-radius: 40px;
+  animation: hamada1 2s ease-out;
+  -webkit-animation: hamada1 2s ease-out;
+}
+
+@keyframes hamada1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 82.5%;
+  }
+}
+
+.budget-overview .all-cards .card-2 .buttom .inner-buttom {
+  width: 50%;
+  height: 10px;
+  background-color: #ff6900;
+  border-radius: 40px;
+  animation: hamada2 2s ease-out;
+  -webkit-animation: hamada2 2s ease-out;
+}
+
+@keyframes hamada2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+.budget-overview .all-cards .card-3 .buttom .inner-buttom {
+  width: 100%;
+  height: 10px;
+  background-color: #fb2c36;
+  border-radius: 40px;
+  animation: hamada3 2s ease-out;
+  -webkit-animation: hamada3 2s ease-out;
+}
+
+@keyframes hamada3 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.budget-overview .all-cards .card-4 .buttom .inner-buttom {
+  width: 80%;
+  height: 10px;
+  background-color: #f6339a;
+  border-radius: 40px;
+  animation: hamada4 2s ease-out;
+  -webkit-animation: hamada4 2s ease-out;
+}
+
+@keyframes hamada4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+.color-orange {
+  color: #ff6900;
+}
+
+.budget-overview .all-cards .card-2,
+.budget-overview .all-cards .card-3,
+.budget-overview .all-cards .card-4 {
+  background-color: #f5f6f8;
+  height: 250px;
+}
+
+.budget-overview .all-cards .card-2 .head .icon {
+  background-color: #ffedd4;
+  border-radius: 10px;
+  padding: 0.9375rem;
+}
+
+.budget-overview .all-cards .card-3 .head .icon {
+  background-color: #fee2e2;
+  color: red;
+  border-radius: 10px;
+  padding: 0.9375rem;
+}
+.budget-overview .all-cards .card-4 .head .icon {
+  background-color: #fce7f3;
+  color: #e60076;
+  border-radius: 10px;
+  padding: 0.9375rem;
+}
+
+/************** income-versus-expenses *************/
+
+.income-versus-expenses {
+  grid-area: income-versus-expenses;
+  direction: rtl;
+}
+
+.square-green {
+  width: 20px;
+  height: 20px;
+  background-color: #10b981;
+  border-radius: 5px;
+}
+
+.square-red {
+  width: 20px;
+  height: 20px;
+  background-color: #f23b3b;
+  border-radius: 5px;
+}
+
+.middle {
+  margin-bottom: 100px;
+}
+
+.chart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.columns {
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.col-red {
+  width: 25px;
+  height: 150px;
+  border-radius: 6px;
+  background-color: #ef4444;
+}
+
+.col-green {
+  width: 25px;
+  height: 200px;
+  border-radius: 6px;
+  background-color: #10b981;
+}
+
+.bar p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-top: 5px;
+}
+
+.columns-red-1 {
+  height: 100px;
+}
+.columns-red-2 {
+  height: 120px;
+}
+.columns-red-3 {
+  height: 80px;
+}
+.columns-red-4 {
+  height: 110px;
+}
+
+/************** account-summary *************/
+
+.account-summary {
+  grid-area: account-summary;
+  direction: rtl;
+}
+
+.account-summary .current-account .icon-text .icon span i,
+.account-summary .saving-account .icon-text .icon span i,
+.account-summary .credit-card .icon-text .icon span i {
+  padding: 0.9375rem 1.25rem;
+  border-radius: 10px;
+}
+
+.account-summary .current-account .icon-text .text p,
+.account-summary .saving-account .icon-text .text p,
+.account-summary .credit-card .icon-text .text p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.account-summary .current-account,
+.saving-account,
+.credit-card {
+  background-color: #f5f5f5;
+  padding: 1.875rem 0;
+  border: 1px solid rgb(246, 242, 242);
+  border-radius: 20px;
+}
+
+/************* Payment methods *************/
+
+.payment-methods {
+  grid-area: payment-methods;
+  direction: rtl;
+}
+
+.inner-box {
+  width: 30px;
+  height: 20px;
+  background-color: color-mix(in oklab, var(--color-white) 40%, transparent);
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  border-radius: 7px;
+}
+
+.outer-box {
+  width: 50px;
+  height: 35px;
+  background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  position: relative;
+  border-radius: 7px;
+}
+
+.visa,
+.master-card,
+.paypal {
+  width: 100%;
+  height: 300px;
+  direction: rtl;
+  position: relative;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.visa:hover,
+.master-card:hover,
+.paypal:hover {
+  transform: rotateY(180deg);
+}
+
+.visa-front,
+.visa-back,
+.master-card-front,
+.master-card-back,
+.paypal-front,
+.paypal-back {
+  color: #fff;
+  padding: 1.25rem;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  direction: rtl;
+}
+
+.visa-front .left i,
+.master-card-front .left i,
+.paypal-front .left i {
+  font-size: 1.875rem;
+}
+
+.visa-front,
+.master-card-front,
+.paypal-front {
+  background-color: oklch(39.8% 0.195 277.366);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.visa-front .middle,
+.master-card-front .middle,
+.paypal-front .middel {
+  font-weight: 700;
+}
+
+.visa-back,
+.master-card-back,
+.paypal-back {
+  background-image: linear-gradient(120deg, #051026, #0b1220 45%, #0f1724);
+  z-index: -1;
+  transform: rotateY(180deg);
+}
+
+.visa .visa-back .head,
+.master-card .master-card-back .head,
+.paypal .paypal-back .head {
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(90deg, #000, #111 40%, #2b2b2b);
+}
+
+.visa .visa-back .middle,
+.master-card .master-card-back .middle,
+.paypal .paypal-back .middle {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+
+.visa .visa-back .middle .inner-middle,
+.master-card .master-card-back .middle .inner-middle,
+.paypal .paypal-back .middle .inner-middle {
+  width: 80%;
+  height: 20px;
+  background-color: rgb(203, 201, 201);
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.visa .visa-back .middle .text-left,
+.master-card .master-card-back .middle .text-left,
+.paypal .paypal-back .middle .text-left {
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  color: black;
+  font-weight: 600;
+}
+
+.visa .visa-back .buttom,
+.master-card .master-card-back .buttom,
+.paypal .paypal-back .buttom {
+  width: 140px;
+  height: 50px;
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: start;
+}
+
+.master-card-front {
+  background-color: oklch(51.4% 0.222 16.935);
+}
+
+.master-card-back {
+  background-color: linear-gradient(120deg, #051026, #0b1220 45%, #0f1724);
+}
+
+.paypal-back {
+  background-color: linear-gradient(120deg, #051026, #0b1220 45%, #0f1724);
+}
+
+.paypal-front {
+  background-color: oklch(42.4% 0.199 265.638);
+}
