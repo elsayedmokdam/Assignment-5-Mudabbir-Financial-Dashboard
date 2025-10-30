@@ -126,6 +126,9 @@ button {
   scrollbar-color: #f2f3f5;
   scrollbar-width: thin;
   position: fixed;
+  top: 70px;
+  border-top: 1px solid rgb(182, 179, 179);
+  border-radius: 20px;
 }
 
 .Modabber p {
@@ -246,6 +249,7 @@ button {
   margin-block: 20px;
   position: absolute;
   left: 20px;
+  top: 50px;
   grid-template-areas:
     "heading heading heading heading heading heading heading heading heading"
     "balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses balance-income-expenses"
@@ -262,6 +266,58 @@ button {
     "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview"
     "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview"
     "payment-methods payment-methods payment-methods account-summary account-summary account-summary budget-overview budget-overview budget-overview";
+}
+
+.top-marquee {
+  position: fixed;
+  width: 95%;
+  height: 40px;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: linear-gradient(#3c79ff, rgb(40, 40, 204));
+  border-radius: 20px;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  box-shadow: 2px 2px 5px #000,2px 2px 5px #000;
+}
+
+.top-marquee p {
+  padding-right: 100%;
+  font-size: 1.125rem;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: slider 10s ease-in-out infinite;
+  -webkit-animation: slider 10s ease-in-out infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(100%);
+  }
+  /* pause in the midle of the page for few seconds */
+  45% {
+    transform: translateX(40%);
+    -webkit-transform: translateX(40%);
+    -moz-transform: translateX(40%);
+    -ms-transform: translateX(40%);
+    -o-transform: translateX(40%);
+  }
+  60% {
+    transform: translateX(40%);
+    -webkit-transform: translateX(40%);
+    -moz-transform: translateX(40%);
+    -ms-transform: translateX(40%);
+    -o-transform: translateX(40%);
+  }
+  /********* continue moving ********/
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Heading */
