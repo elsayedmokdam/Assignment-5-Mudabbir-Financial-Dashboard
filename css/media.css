@@ -82,6 +82,40 @@
       "account-summary account-summary account-summary";
   }
 
+  .top-marquee p {
+    padding-right: 100%;
+    font-size: 1.125rem;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: slider 10s ease-in-out infinite;
+    -webkit-animation: slider 10s ease-in-out infinite;
+  }
+
+  @keyframes slider {
+    0% {
+      transform: translateX(100%);
+    }
+    /* pause in the midle of the page for few seconds */
+    45% {
+      transform: translateX(22%);
+      -webkit-transform: translateX(22%);
+      -moz-transform: translateX(22%);
+      -ms-transform: translateX(22%);
+      -o-transform: translateX(22%);
+    }
+    60% {
+      transform: translateX(22%);
+      -webkit-transform: translateX(22%);
+      -moz-transform: translateX(22%);
+      -ms-transform: translateX(22%);
+      -o-transform: translateX(22%);
+    }
+    /********* continue moving ********/
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
   /********************* Heading ********************/
 
   .Modabber-mottasel {
@@ -169,6 +203,10 @@
 
   .recent-activities .add-new-card .text h4 {
     font-size: 0.875rem;
+  }
+
+  .recent-activities .add-new-card {
+    gap: 8px;
   }
 
   .recent-activities .add-new-card .text p,
@@ -371,6 +409,40 @@
       "account-summary account-summary account-summary"
       "account-summary account-summary account-summary"
       "account-summary account-summary account-summary";
+  }
+
+  .top-marquee p {
+    padding-right: 100%;
+    font-size: 1.125rem;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: slider 10s ease-in-out infinite;
+    -webkit-animation: slider 10s ease-in-out infinite;
+  }
+
+  @keyframes slider {
+    0% {
+      transform: translateX(100%);
+    }
+    /* pause in the midle of the page for few seconds */
+    45% {
+      transform: translateX(35%);
+      -webkit-transform: translateX(35%);
+      -moz-transform: translateX(35%);
+      -ms-transform: translateX(35%);
+      -o-transform: translateX(35%);
+    }
+    60% {
+      transform: translateX(35%);
+      -webkit-transform: translateX(35%);
+      -moz-transform: translateX(35%);
+      -ms-transform: translateX(35%);
+      -o-transform: translateX(35%);
+    }
+    /********* continue moving ********/
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
   /********************* Heading ********************/
@@ -693,6 +765,6 @@
     flex-direction: row;
   }
   .navbar {
-    width: 17%;
+    width: 18%;
   }
 }
