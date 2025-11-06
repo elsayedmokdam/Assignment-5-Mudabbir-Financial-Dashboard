@@ -48,6 +48,14 @@ ul li {
   justify-content: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
 .align-center {
   align-items: center;
 }
@@ -282,7 +290,7 @@ button {
   display: flex;
   align-items: center;
   z-index: 9999;
-  box-shadow: 2px 2px 5px #000,2px 2px 5px #000;
+  box-shadow: 2px 2px 5px #000, 2px 2px 5px #000;
 }
 
 .top-marquee p {
@@ -718,18 +726,19 @@ table td:not(.first-column) {
 .budget-overview {
   grid-area: budget-overview;
   direction: rtl;
+  height: fit-content;
 }
 
 .budget-overview .all-cards .card {
   width: 100%;
-  height: 280px;
+  height: fit-content;
   padding: 20px;
   background-color: #eff5ff;
   border-radius: 10px;
   border: 1px solid rgb(202, 201, 201);
 }
 
-.budget-overview .all-cards .card .middle {
+.budget-overview .all-cards .card .mid {
   text-align: end;
 }
 
@@ -812,15 +821,33 @@ table td:not(.first-column) {
   }
 }
 
+.budget-overview .all-cards .card-5 .buttom .inner-buttom {
+  width: 86%;
+  height: 10px;
+  background-color: #00c951;
+  border-radius: 40px;
+  animation: hamada5 2s ease-out;
+  -webkit-animation: hamada5 2s ease-out;
+}
+
+@keyframes hamada5 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 86%;
+  }
+}
+
 .color-orange {
   color: #ff6900;
 }
 
 .budget-overview .all-cards .card-2,
 .budget-overview .all-cards .card-3,
-.budget-overview .all-cards .card-4 {
+.budget-overview .all-cards .card-4,
+.budget-overview .all-cards .card-5 {
   background-color: #f5f6f8;
-  height: 250px;
 }
 
 .budget-overview .all-cards .card-2 .head .icon {
@@ -838,6 +865,13 @@ table td:not(.first-column) {
 .budget-overview .all-cards .card-4 .head .icon {
   background-color: #fce7f3;
   color: #e60076;
+  border-radius: 10px;
+  padding: 0.9375rem;
+}
+
+.budget-overview .all-cards .card-5 .head .icon {
+  background-color: #dcfce7;
+  color: #00c951;
   border-radius: 10px;
   padding: 0.9375rem;
 }
@@ -926,6 +960,7 @@ table td:not(.first-column) {
 .account-summary {
   grid-area: account-summary;
   direction: rtl;
+  height: fit-content;
 }
 
 .account-summary .current-account .icon-text .icon span i,
@@ -956,6 +991,7 @@ table td:not(.first-column) {
 .payment-methods {
   grid-area: payment-methods;
   direction: rtl;
+  height: fit-content;
 }
 
 .inner-box {
@@ -980,7 +1016,7 @@ table td:not(.first-column) {
 .master-card,
 .paypal {
   width: 100%;
-  height: 300px;
+  height: 220px;
   direction: rtl;
   position: relative;
   transition: transform 0.4s;
@@ -1006,6 +1042,9 @@ table td:not(.first-column) {
   height: 100%;
   position: absolute;
   direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .visa-front .left i,
@@ -1022,9 +1061,9 @@ table td:not(.first-column) {
   -webkit-backface-visibility: hidden;
 }
 
-.visa-front .middle,
-.master-card-front .middle,
-.paypal-front .middel {
+.visa-front .card-middle,
+.master-card-front .card-middle,
+.paypal-front .card-middle {
   font-weight: 700;
 }
 
@@ -1044,9 +1083,9 @@ table td:not(.first-column) {
   background-image: linear-gradient(90deg, #000, #111 40%, #2b2b2b);
 }
 
-.visa .visa-back .middle,
-.master-card .master-card-back .middle,
-.paypal .paypal-back .middle {
+.visa .visa-back .card-middle,
+.master-card .master-card-back .card-middle,
+.paypal .paypal-back .card-middle {
   width: 100%;
   height: 40px;
   background-color: #fff;
@@ -1054,9 +1093,9 @@ table td:not(.first-column) {
   position: relative;
 }
 
-.visa .visa-back .middle .inner-middle,
-.master-card .master-card-back .middle .inner-middle,
-.paypal .paypal-back .middle .inner-middle {
+.visa .visa-back .card-middle .inner-middle,
+.master-card .master-card-back .card-middle .inner-middle,
+.paypal .paypal-back .card-middle .inner-middle {
   width: 80%;
   height: 20px;
   background-color: rgb(203, 201, 201);
@@ -1066,9 +1105,9 @@ table td:not(.first-column) {
   right: 5px;
 }
 
-.visa .visa-back .middle .text-left,
-.master-card .master-card-back .middle .text-left,
-.paypal .paypal-back .middle .text-left {
+.visa .visa-back .card-middle .text-left,
+.master-card .master-card-back .card-middle .text-left,
+.paypal .paypal-back .card-middle .text-left {
   position: absolute;
   top: 8px;
   left: 2px;
